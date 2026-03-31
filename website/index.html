@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aydigi | We Build the Future</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="Aydigi logo" class="logo-icon" />
+        Aydigi
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Open-Source Organization</span>
+      <h1>We Build<br /><span class="gradient-text typewriter" id="typewriter"></span></h1>
+      <p>Aydigi is a team of passionate developers building open-source software, tools, and products that make a real difference.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">Explore Projects</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <pre><code><span class="kw">const</span> <span class="fn">aydigi</span> = {
+  mission: <span class="str">"Build with purpose"</span>,
+  stack: [<span class="str">"Web"</span>, <span class="str">"Mobile"</span>, <span class="str">"AI"</span>],
+  open_source: <span class="bool">true</span>,
+  <span class="fn">build</span>: () =&gt; <span class="str">"🚀 Shipping..."</span>
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STRIP -->
+  <div class="tech-strip">
+    <div class="tech-track">
+      <span>TypeScript</span><span>React</span><span>Node.js</span><span>Python</span><span>Go</span><span>Docker</span><span>Rust</span><span>GraphQL</span><span>PostgreSQL</span><span>Kubernetes</span><span>Next.js</span><span>Tailwind</span>
+      <span>TypeScript</span><span>React</span><span>Node.js</span><span>Python</span><span>Go</span><span>Docker</span><span>Rust</span><span>GraphQL</span><span>PostgreSQL</span><span>Kubernetes</span><span>Next.js</span><span>Tailwind</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About Us</div>
+      <h2>A community-driven organization.</h2>
+      <p class="section-sub">We are developers, designers, and thinkers united by one goal — to build software that solves real-world problems. From small utilities to full-scale platforms, every project we ship reflects our commitment to quality and openness.</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 class="counter" data-target="24">0</h3>
+          <p>Projects Shipped</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="counter" data-target="12">0</h3>
+          <p>Contributors</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="counter" data-target="5">0</h3>
+          <p>Years Active</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="counter" data-target="3800">0</h3>
+          <p>GitHub Stars</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE BUILD -->
+  <section class="section section-dark" id="process">
+    <div class="container">
+      <div class="section-label">Our Process</div>
+      <h2>How we build.</h2>
+      <p class="section-sub">Every great project follows a clear path from idea to impact.</p>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h3>Discover</h3>
+          <p>We dig into the problem space, talk to users, and define what success looks like before writing a single line of code.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <h3>Design</h3>
+          <p>Architecture first. We sketch systems, plan data flows, and prototype ideas rapidly to validate assumptions early.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <h3>Build</h3>
+          <p>Iterative development with clean code, thorough tests, and continuous integration — shipping value incrementally.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <h3>Ship &amp; Iterate</h3>
+          <p>We deploy, measure, learn, and keep improving. Great software is never finished — it evolves with its users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-label">Our Work</div>
+      <h2>Featured Projects</h2>
+      <p class="section-sub">Handcrafted software built in the open.</p>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-icon">🔧</div>
+          <h3>DevKit</h3>
+          <p>A powerful CLI toolkit for modern developers. Automate repetitive tasks and streamline your workflow.</p>
+          <div class="project-tags">
+            <span>CLI</span><span>Node.js</span><span>Open Source</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🌐</div>
+          <h3>NexAPI</h3>
+          <p>A lightweight REST API framework with built-in authentication, rate limiting, and auto-generated docs.</p>
+          <div class="project-tags">
+            <span>API</span><span>TypeScript</span><span>REST</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🤖</div>
+          <h3>AiFlow</h3>
+          <p>An AI pipeline builder that lets you compose, test, and deploy machine learning workflows visually.</p>
+          <div class="project-tags">
+            <span>AI/ML</span><span>Python</span><span>React</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">📦</div>
+          <h3>PackSync</h3>
+          <p>Synchronize packages and dependencies across monorepos with a single command.</p>
+          <div class="project-tags">
+            <span>DevOps</span><span>Monorepo</span><span>CLI</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">📊</div>
+          <h3>Dashify</h3>
+          <p>Turn any dataset into beautiful, interactive dashboards with zero configuration required.</p>
+          <div class="project-tags">
+            <span>Data Viz</span><span>React</span><span>D3.js</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🔒</div>
+          <h3>VaultKey</h3>
+          <p>A secure, self-hosted secrets manager for teams. Keep credentials safe and auditable.</p>
+          <div class="project-tags">
+            <span>Security</span><span>Go</span><span>Docker</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US CTA -->
+  <section class="section join-section">
+    <div class="container">
+      <div class="join-card">
+        <div class="join-orb join-orb-1"></div>
+        <div class="join-orb join-orb-2"></div>
+        <div class="join-content">
+          <span class="badge">Open Positions</span>
+          <h2>Build the future with us.</h2>
+          <p>We're always looking for curious minds. Whether you code, design, or dream in systems — there's a place for you at Aydigi.</p>
+          <div class="join-actions">
+            <a href="#contact" class="btn-primary">Apply Now</a>
+            <a href="#projects" class="btn-outline">See Our Work</a>
+          </div>
+        </div>
+        <div class="join-roles">
+          <div class="role-badge">🧠 AI Engineer</div>
+          <div class="role-badge">⚙️ Backend Dev</div>
+          <div class="role-badge">🎨 UI Designer</div>
+          <div class="role-badge">🔒 Security Eng.</div>
+          <div class="role-badge">📱 Mobile Dev</div>
+          <div class="role-badge">☁️ DevOps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-label">The Team</div>
+      <h2>People behind Aydigi</h2>
+      <p class="section-sub">A distributed team of builders who care about craft.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar" style="background:#6c63ff;">AY</div>
+          <h4>Alex Yu</h4>
+          <p>Founder & Lead Engineer</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar" style="background:#ff6584;">SM</div>
+          <h4>Sara Malik</h4>
+          <p>Full-Stack Developer</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar" style="background:#43d98a;">JK</div>
+          <h4>James Kim</h4>
+          <p>DevOps & Infrastructure</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar" style="background:#f9a825;">PN</div>
+          <h4>Priya Nair</h4>
+          <p>AI / ML Engineer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact-container">
+      <div class="section-label">Get In Touch</div>
+      <h2>Work with us or contribute.</h2>
+      <p class="section-sub">Have a project idea? Want to join our open-source effort? We'd love to hear from you.</p>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <textarea placeholder="Tell us about your project or idea..." rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+      <div id="form-success" class="form-success hidden">Thanks! We'll be in touch soon.</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">Aydigi</span>
+      <p>&copy; 2026 Aydigi Organization. Open-source & proud.</p>
+      <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="#">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

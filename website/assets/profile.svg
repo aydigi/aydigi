@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d14"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff"/>
+      <stop offset="50%" style="stop-color:#9b8fff"/>
+      <stop offset="100%" style="stop-color:#43d98a"/>
+    </linearGradient>
+    <linearGradient id="hexFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#43d98a;stop-opacity:0.18"/>
+    </linearGradient>
+    <linearGradient id="letterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a89fff"/>
+      <stop offset="100%" style="stop-color:#43d98a"/>
+    </linearGradient>
+    <radialGradient id="glowBg" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:0.22"/>
+      <stop offset="100%" style="stop-color:#0d0d14;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#6c63ff" flood-opacity="0.25"/>
+    </filter>
+    <clipPath id="circle">
+      <circle cx="200" cy="200" r="196"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circular clip boundary -->
+  <circle cx="200" cy="200" r="200" fill="#0d0d14"/>
+
+  <!-- Background gradient -->
+  <circle cx="200" cy="200" r="196" fill="url(#bgGrad)" clip-path="url(#circle)"/>
+
+  <!-- Radial glow -->
+  <circle cx="200" cy="190" r="196" fill="url(#glowBg)" clip-path="url(#circle)"/>
+
+  <!-- Outer gradient ring -->
+  <circle cx="200" cy="200" r="193" fill="none"
+          stroke="url(#ringGrad)" stroke-width="4" opacity="0.8"
+          filter="url(#softGlow)"/>
+
+  <!-- Decorative outer dashes -->
+  <circle cx="200" cy="200" r="180" fill="none"
+          stroke="url(#ringGrad)" stroke-width="1" opacity="0.2"
+          stroke-dasharray="6 14"/>
+
+  <!-- Large background hexagon -->
+  <polygon points="200,60 296,115 296,225 200,280 104,225 104,115"
+           fill="url(#hexFill)"
+           stroke="url(#ringGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="200,100 255,132 255,196 200,228 145,196 145,132"
+           fill="none"
+           stroke="url(#ringGrad)" stroke-width="1" opacity="0.3"/>
+
+  <!-- Corner node dots on outer hex -->
+  <circle cx="200" cy="60"  r="5" fill="#6c63ff" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="296" cy="115" r="5" fill="#8b84ff" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="296" cy="225" r="5" fill="#43d98a" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="200" cy="280" r="5" fill="#6c63ff" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="104" cy="225" r="5" fill="#43d98a" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="104" cy="115" r="5" fill="#8b84ff" opacity="0.9" filter="url(#softGlow)"/>
+
+  <!-- "AY" lettermark -->
+  <text x="200" y="228" text-anchor="middle"
+        font-family="'Inter','Arial Black',sans-serif"
+        font-weight="900" font-size="108" letter-spacing="-6"
+        fill="url(#letterGrad)" opacity="0.95"
+        filter="url(#softGlow)">AY</text>
+
+  <!-- Tagline text -->
+  <text x="200" y="318" text-anchor="middle"
+        font-family="'Inter','Arial',sans-serif"
+        font-weight="600" font-size="22" letter-spacing="5"
+        fill="#8888aa" opacity="0.9">AYDIGI</text>
+
+  <!-- Thin separator line under tagline -->
+  <line x1="150" y1="330" x2="250" y2="330"
+        stroke="url(#ringGrad)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Bottom accent dot -->
+  <circle cx="200" cy="348" r="4" fill="url(#ringGrad)" opacity="0.8"/>
+</svg>

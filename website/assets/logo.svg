@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43d98a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0d9ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="200" height="200" rx="40" ry="40" fill="#0d0d14"/>
+
+  <!-- Gradient accent ring -->
+  <rect width="200" height="200" rx="40" ry="40" fill="none"
+        stroke="url(#bgGrad)" stroke-width="3" opacity="0.6"/>
+
+  <!-- Hexagon shape (organization/structure symbol) -->
+  <polygon points="100,28 148,56 148,112 100,140 52,112 52,56"
+           fill="none" stroke="url(#bgGrad)" stroke-width="2.5"
+           stroke-linejoin="round" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="100,50 128,66 128,98 100,114 72,98 72,66"
+           fill="url(#bgGrad)" opacity="0.15"/>
+
+  <!-- Bold "AY" lettermark -->
+  <text x="100" y="115" text-anchor="middle"
+        font-family="'Inter', 'Arial Black', sans-serif"
+        font-weight="900" font-size="46" letter-spacing="-2"
+        fill="url(#bgGrad)" filter="url(#glow)">AY</text>
+
+  <!-- Dot accent -->
+  <circle cx="100" cy="158" r="5" fill="url(#bgGrad)" opacity="0.8"/>
+
+  <!-- Subtle corner nodes -->
+  <circle cx="52"  cy="56"  r="3.5" fill="#6c63ff" opacity="0.7"/>
+  <circle cx="148" cy="56"  r="3.5" fill="#43d98a"  opacity="0.7"/>
+  <circle cx="148" cy="112" r="3.5" fill="#6c63ff"  opacity="0.7"/>
+  <circle cx="52"  cy="112" r="3.5" fill="#43d98a"  opacity="0.7"/>
+  <circle cx="100" cy="28"  r="3.5" fill="#8b84ff"  opacity="0.7"/>
+  <circle cx="100" cy="140" r="3.5" fill="#6effa8"  opacity="0.7"/>
+</svg>
