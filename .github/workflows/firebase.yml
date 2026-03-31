@@ -8,18 +8,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Firebase secret missing
-        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 == '' }}
+        if: ${{ env.FIREBASE_SERVICE_ACCOUNT == '' }}
         run: echo "Skipping Firebase deploy because FIREBASE_SERVICE_ACCOUNT_AYDIGI32 is not set."
 
       - name: Deploy to Firebase Hosting
-        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 != '' }}
+        if: ${{ env.FIREBASE_SERVICE_ACCOUNT != '' }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 }}
+          firebaseServiceAccount: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
           channelId: live
           projectId: aydigi32
