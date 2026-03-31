@@ -278,6 +278,102 @@ body {
 
 .stat-card p { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
 
+.about-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.about-detail-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.about-detail-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.about-detail-card h3 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-detail-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.about-list {
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.about-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #c8c8da;
+}
+
+.domain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.domain-tags span {
+  background: rgba(67,217,138,0.12);
+  border: 1px solid rgba(67,217,138,0.25);
+  color: var(--accent);
+  border-radius: 7px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.about-principles {
+  margin-top: 26px;
+  background: linear-gradient(145deg, rgba(108,99,255,0.08), rgba(67,217,138,0.06));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px 26px;
+}
+
+.about-principles h3 {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.principle-item {
+  background: rgba(16,16,28,0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.principle-item strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.principle-item p {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
 /* ── PROJECTS ── */
 .projects-grid {
   display: grid;
@@ -660,4 +756,5 @@ body > *:not(#particleCanvas):not(.cursor-glow) {
   .footer-inner { flex-direction: column; text-align: center; }
   .join-card { flex-direction: column; padding: 40px 28px; gap: 36px; }
   .join-roles { grid-template-columns: repeat(3, 1fr); }
+  .about-principles { padding: 24px 18px; }
 }
