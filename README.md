@@ -4,6 +4,21 @@
 
 ---
 
+## 🔗 Links
+
+- About: Aydigi open-source organization website — dark-themed, particle canvas, typewriter hero, project showcase
+- Repository: https://github.com/aydigi/aydigi
+- Website (Vercel): https://aydigi.vercel.app
+- Website (Firebase): https://aydigi32.web.app
+- Website (GitHub Pages): https://aydigi.github.io/aydigi/
+
+### Resources
+
+- Root Readme: https://github.com/aydigi/aydigi/blob/main/README.md
+- Website Readme: https://github.com/aydigi/aydigi/blob/main/website/README.md
+
+---
+
 ## 🌐 Website
 
 A fully responsive dark-themed organization website built with plain HTML, CSS, and JavaScript. No frameworks, no build step.
@@ -33,15 +48,15 @@ A fully responsive dark-themed organization website built with plain HTML, CSS, 
 
 ```
 aydigi/
+├── assets/
+│   ├── logo.svg         # Square logo icon (AY monogram + hexagon)
+│   ├── profile.svg      # 400×400 circular profile picture
+│   └── favicon.svg      # 32×32 browser favicon
 └── website/
     ├── index.html        # Main single-page site
     ├── styles.css        # All styling — dark theme, responsive
     ├── script.js         # Particles, typewriter, counters, reveal
-    ├── README.md         # Website-specific docs
-    └── assets/
-        ├── logo.svg      # Square logo icon (AY monogram + hexagon)
-        ├── profile.svg   # 400×400 circular profile picture
-        └── favicon.svg   # 32×32 browser favicon
+    └── README.md         # Website-specific docs
 ```
 
 ---
