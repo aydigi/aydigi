@@ -21,17 +21,17 @@ jobs:
           test -f website/index.html
           test -f website/styles.css
           test -f website/script.js
-          test -f assets/logo.svg
-          test -f assets/profile.svg
-          test -f assets/favicon.svg
+          test -f logo.svg
+          test -f profile.svg
+          test -f favicon.svg
 
       - name: Validate asset references in HTML
         run: |
           set -eo pipefail
-          refs=$(grep -Eo '(src|href)="\.\./assets/[^"]+"' website/index.html | sed -E 's/^(src|href)="(.*)"$/\2/' || true)
+          refs=$(grep -Eo '(src|href)="\.\./[^"]+\.(svg|png|jpg|jpeg|webp|gif|ico)"' website/index.html | sed -E 's/^(src|href)="(.*)"$/\2/' || true)
 
           if [ -z "$refs" ]; then
-            echo "No ../assets references found in website/index.html"
+            echo "No root-relative image references found in website/index.html"
             exit 1
           fi
 
