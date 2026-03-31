@@ -11,7 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Firebase secret missing
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 == '' }}
+        run: echo "Skipping Firebase deploy because FIREBASE_SERVICE_ACCOUNT_AYDIGI32 is not set."
+
       - name: Deploy to Firebase Hosting
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYDIGI32 != '' }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
